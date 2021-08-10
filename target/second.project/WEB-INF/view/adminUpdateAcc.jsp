@@ -21,16 +21,13 @@
     <h4>NAME:<form:input path="name"/></h4>
     <h4>SURNAME:<form:input path="surname"/></h4>
     <h4>SALARY:<form:input path="salary"/></h4>
-
+    <form:hidden path="authority"/>
     <h4>POST:   <br>
+        CLIENT<form:radiobutton path="post" value="Client"/>
         FRONT-END DEVELOPER<form:radiobutton path="post" value="Front-end developer"/>
         BACK-END DEVELOPER<form:radiobutton path="post" value="Back-end developer"/>
         OPERATIONS MANAGER<form:radiobutton path="post" value="Operations manager"/>
-    </h4>
-    <h4>ROLE: <br>
-    ADMIN<form:radiobutton path="authority" value="ROLE_ADMIN"/>
-    EMPLOYEE<form:radiobutton path="authority" value="ROLE_EMPLOYEE"/>
-    CLIENT<form:radiobutton path="authority" value="ROLE_CLIENT"/>
+        ADMINISTRATOR<form:radiobutton path="post" value="Administrator"/>
     </h4>
     <br><br>
     <input type="submit" value="SAVE"/>
