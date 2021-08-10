@@ -284,5 +284,4 @@ public class MyController {
         model.addAttribute("projects",projectService.getAllProjectsCompleted());
         return "/projectsCompleted";
     }
-
 }
