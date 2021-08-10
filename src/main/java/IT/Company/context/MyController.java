@@ -156,12 +156,14 @@ public class MyController {
             return "redirect:/allEmployees";
         }
     }
+
     @RequestMapping("/myProjects")
     public String myProjects(Model model){
         org.springframework.security.core.userdetails.User user = (org.springframework.security.core.userdetails.User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         model.addAttribute("myProjects",projectService.getMyProjects(user.getUsername()));
         return "/myProjects";
     }
+
     @RequestMapping("/addOrder")
     public String addOrder(Model model){
         org.springframework.security.core.userdetails.User user = (org.springframework.security.core.userdetails.User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -169,6 +171,7 @@ public class MyController {
         model.addAttribute("project",project);
         return "/addOrder";
     }
+
     @RequestMapping("/saveNewOrder")
     public String saveNewOrder(@ModelAttribute("project")Project project){
         projectService.saveProject(project);
@@ -206,6 +209,7 @@ public class MyController {
         projectService.saveProject(project);
         return "redirect:/myProjects";
     }
+
     @RequestMapping("/addDeveloper")
     public String addDeveloper(@RequestParam("id") int id,@RequestParam("button")String button,Model model){
         if (button.equals("front")) {
@@ -216,6 +220,7 @@ public class MyController {
         model.addAttribute("projectId",id);
         return "/addDeveloper";
     }
+
     @RequestMapping("/saveAddDeveloper")
     public String saveAddDeveloper(@RequestParam("username")String username,@RequestParam("projectId")int id){
         Project project = projectService.getProject(id);
@@ -227,16 +232,19 @@ public class MyController {
         projectService.saveProject(project);
         return "redirect:/projectsWithoutDevelopers";
     }
+
     @RequestMapping("/projectsUnpaid")
     public String projectsUnpaid(Model model){
         model.addAttribute("projects",projectService.getAllProjectsUnpaid());
         return "/projectsUnpaid";
     }
+
     @RequestMapping("/deleteProject")
     public String deleteProject(@RequestParam("projectId")int id){
         projectService.deleteProject(id);
         return "redirect:/projectsUnpaid";
     }
+
     @RequestMapping("/myWorkProjects")
     public String myWork(Model model){
         org.springframework.security.core.userdetails.User user = (org.springframework.security.core.userdetails.User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -245,6 +253,7 @@ public class MyController {
         model.addAttribute("username",user.getUsername());
         return "/myWorkProjects";
     }
+
     @RequestMapping("/completeMyWork")
     public String completeMyWork(@RequestParam("projectId")int id,@RequestParam("username")String username){
         Project project = projectService.getProject(id);
@@ -257,6 +266,7 @@ public class MyController {
         projectService.saveProject(project);
         return "redirect:/myWorkProjects";
     }
+
     @RequestMapping("/releaseProject")
     public String releaseProject(@RequestParam("projectId")int id){
         Project project = projectService.getProject(id);
@@ -268,9 +278,11 @@ public class MyController {
             return "/releaseError";
         }
     }
+
     @RequestMapping("/projectsCompleted")
     public String projectsCompleted(Model model){
         model.addAttribute("projects",projectService.getAllProjectsCompleted());
         return "/projectsCompleted";
     }
+
 }
