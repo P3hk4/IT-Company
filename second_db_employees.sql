@@ -39,7 +39,7 @@ CREATE TABLE `employees` (
 
 LOCK TABLES `employees` WRITE;
 /*!40000 ALTER TABLE `employees` DISABLE KEYS */;
-INSERT INTO `employees` VALUES ('admin','Pavel','Tarasov','Director',100000),('backdev','Andrey','Kolokolcev','Back-end developer',80000),('client','DEV','COMPANY',NULL,0),('frontdev','Sergey','Dobry','Front-end developer',80000),('user','Leonid','Novikov','Operations manager',90000);
+INSERT INTO `employees` VALUES ('admin','Pavel','Tarasov','developer',100000),('backdev','Andrey','Kolokolcev','Back-end developer',80000),('client','DEV','COMPANY',NULL,0),('frontdev','Sergey','Dobry','Front-end developer',80000),('user','Leonid','Novikov','Operations manager',90000);
 /*!40000 ALTER TABLE `employees` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
