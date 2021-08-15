@@ -17,7 +17,7 @@ public class ProjectDAOImplementation implements ProjectDAO{
     @Override
     public List<Project> getAllProjectsInProgress() {
         Session session = sessionFactory.getCurrentSession();
-        List<Project> projectsOnWork = session.createQuery("from Project where (frontendDeveloper != null ) and (backendDeveloper != null) and (payed = true) and (completed = false)",Project.class).getResultList();
+        List<Project> projectsOnWork = session.createQuery("from Project where (payed=true) and (backendDeveloper!=null) and (frontendDeveloper!=null) and (completed=false)",Project.class).getResultList();
         return projectsOnWork;
     }
 
@@ -38,7 +38,7 @@ public class ProjectDAOImplementation implements ProjectDAO{
     @Override
     public List<Project> getAllProjectWithoutDevelopers() {
         Session session = sessionFactory.getCurrentSession();
-        List<Project> projectsWithoutDevelopers = session.createQuery("from Project where (payed = true ) and ((frontendDeveloper = null ) or (backendDeveloper = null))",Project.class).getResultList();
+        List<Project> projectsWithoutDevelopers = session.createQuery("from Project where (payed = true) and ((frontendDeveloper = null ) or (backendDeveloper = null))",Project.class).getResultList();
         return projectsWithoutDevelopers;
     }
 
