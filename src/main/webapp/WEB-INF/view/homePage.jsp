@@ -20,16 +20,16 @@
     <input type="button" value="Registration" onclick="window.location.href='/registration'">
     <input type="button" value="Login" onclick="window.location.href='/login'">
 </security:authorize>
-<security:authorize access="hasRole('ADMIN')">
+<security:authorize access="hasAnyRole('MANAGER','ADMIN')">
     <input type="button" value="Catalog" onclick="window.location.href='/catalog'">
 </security:authorize>
-<security:authorize access="hasRole('EMPLOYEE')">
+<security:authorize access="hasAnyRole('MANAGER','DEVELOPER')">
     <input type="button" value="My work" onclick="window.location.href='/myWorkProjects'">
 </security:authorize>
 <security:authorize access="hasRole('CLIENT')">
     <input type="button" value="My projects" onclick="window.location.href='/myProjects'">
 </security:authorize>
-<security:authorize access="hasAnyRole('ADMIN','EMPLOYEE','CLIENT')">
+<security:authorize access="hasAnyRole('ADMIN','DEVELOPER','MANAGER','CLIENT')">
     <input type="button" value="My Page" onclick="window.location.href='/myAccPage'">
     <br><br>
     <input type="button" value="Quit" onclick="window.location.href='/logout'">

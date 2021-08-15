@@ -2,8 +2,8 @@ package IT.Company.entity;
 
 import javax.persistence.*;
 
-@Table(name = "Authorities")
 @Entity
+@Table(name = "Authorities")
 public class Authority {
 
     @Id

@@ -1,10 +1,10 @@
 package IT.Company.Service;
 
+import IT.Company.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import IT.Company.DAO.UserDAO;
-import IT.Company.entity.User;
 
 @Service
 public class UserServiceImplementation implements UserService{

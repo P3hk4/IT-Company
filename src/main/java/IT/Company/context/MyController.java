@@ -1,5 +1,6 @@
 package IT.Company.context;
 
+import IT.Company.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -13,7 +14,6 @@ import IT.Company.Service.ProjectService;
 import IT.Company.Service.UserService;
 import IT.Company.entity.Account;
 import IT.Company.entity.Project;
-import IT.Company.entity.User;
 
 import java.util.List;
 

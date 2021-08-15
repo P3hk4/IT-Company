@@ -1,12 +1,12 @@
 package IT.Company.DAO;
 
+import IT.Company.entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import IT.Company.entity.Authority;
 import IT.Company.entity.Employee;
-import IT.Company.entity.User;
 
 @Repository
 public class UserDAOImplementation implements UserDAO{
