@@ -46,8 +46,14 @@ public class ProjectServiceImplementation implements ProjectService{
 
     @Override
     @Transactional
-    public List<Project> getMyProjects(String username) {
-        return projectDAO.getMyProjects(username);
+    public List<Project> getMyCompletedProjects(String username) {
+        return projectDAO.getMyCompletedProjects(username);
+    }
+
+    @Override
+    @Transactional
+    public List<Project> getMyCurrentProjects(String username) {
+        return projectDAO.getMyCurrentProjects(username);
     }
 
     @Override

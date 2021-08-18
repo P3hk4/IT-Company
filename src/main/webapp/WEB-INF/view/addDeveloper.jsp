@@ -14,9 +14,8 @@
 </head>
 <body>
 <br><br>
-<h1>ADD DEVELOPER</h1>
-<br><br>
-<table>
+<table border="2" cellpadding="5" cellspacing="1">
+    <caption><h1>ADD DEVELOPER</h1></caption>
     <tr>
         <th><h4>USERNAME</h4></th>
         <th><h4>AUTHORITY</h4></th>
@@ -42,5 +41,7 @@
     </tr>
     </c:forEach>
 </table>
+<br><br>
+<input type="button" value="Back" onclick="window.location.href='/projectsWithoutDevelopers'"/>
 </body>
 </html>

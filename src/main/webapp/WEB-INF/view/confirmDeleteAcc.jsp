@@ -26,8 +26,8 @@
     <h4>POST:${acc.post}</h4>
     <h4>SALARY:${acc.salary}</h4>
     <br><br>
-    <input type="button" value="BACK" onclick="window.location.href='/catalog'">
-    <input type="submit" value="DELETE">
+    <input type="button" value="Back" onclick="window.location.href='/catalog'">
+    <input type="submit" value="Delete">
 </form:form>
 
 </body>

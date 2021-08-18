@@ -23,12 +23,14 @@
 <security:authorize access="hasAnyRole('MANAGER','ADMIN')">
     <input type="button" value="Catalog" onclick="window.location.href='/catalog'">
 </security:authorize>
-<security:authorize access="hasAnyRole('MANAGER','DEVELOPER')">
+<security:authorize access="hasAnyRole('DEVELOPER')">
     <input type="button" value="My work" onclick="window.location.href='/myWorkProjects'">
 </security:authorize>
 <security:authorize access="hasRole('CLIENT')">
-    <input type="button" value="My projects" onclick="window.location.href='/myProjects'">
+    <input type="button" value="My current projects" onclick="window.location.href='/myCurrentProjects'">
+    <input type="button" value="My completed projects" onclick="window.location.href='/myCompletedProjects'">
 </security:authorize>
+<br>
 <security:authorize access="hasAnyRole('ADMIN','DEVELOPER','MANAGER','CLIENT')">
     <input type="button" value="My Page" onclick="window.location.href='/myAccPage'">
     <br><br>

@@ -14,6 +14,6 @@
 <br><br>
 <h1>This project has already been paid for!</h1>
 <br><br>
-<input type="button" value="Back" onclick="window.location.href='/myProjects'">
+<input type="button" value="Back" onclick="window.location.href='/myCurrentProjects'">
 </body>
 </html>

@@ -13,10 +13,8 @@
 </head>
 <body>
 <br><br>
-<h1>All Accounts</h1>
-<br><br>
-
-<table>
+<table border="2" cellpadding="5" cellspacing="1">
+    <caption><h1>All Accounts</h1></caption>
     <tr>
         <th><h4>USERNAME</h4></th>
         <th><h4>AUTHORITY</h4></th>
@@ -56,6 +54,6 @@
 </table>
 
 
-<input type="button" value="BACK" onclick="window.location.href='/catalog'"/>
+<input type="button" value="Back" onclick="window.location.href='/catalog'"/>
 </body>
 </html>

@@ -1,4 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Pavel
@@ -14,6 +15,9 @@
 <body>
 <br><br>
 <form:form modelAttribute="acc" action="/saveAdminUpdate">
+    <c:url value="/back" var="backButton">
+        <c:param name="auth" value="${acc.authority}"/>
+    </c:url>
 <h1>Update ${acc.username}'s account </h1>
 <br><br>
     <form:hidden path="username"/>
@@ -30,9 +34,9 @@
         ADMINISTRATOR<form:radiobutton path="post" value="Administrator"/>
     </h4>
     <br><br>
-    <input type="submit" value="SAVE"/>
+    <input type="submit" value="Save"/>
     <br><br>
-    <input type="button" value="BACK" onclick="window.location.href='/catalog'">
+    <input type="button" value="Back" onclick="window.location.href='${backButton}'">
 </form:form>
 
 </body>

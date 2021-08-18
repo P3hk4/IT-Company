@@ -16,7 +16,9 @@ public interface ProjectService {
 
     public Project getProject(int id);
 
-    public List<Project> getMyProjects(String username);
+    public List<Project> getMyCurrentProjects(String username);
+
+    public List<Project> getMyCompletedProjects(String username);
 
     public void saveProject(Project project);
 

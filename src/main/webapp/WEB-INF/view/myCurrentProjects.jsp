@@ -9,13 +9,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>MY PROJECTS</title>
+    <title>MY CURRENT PROJECTS</title>
 </head>
 <body>
 <br><br>
-<h1>My Projects</h1>
-<br><br>
-<table>
+<table border="2" cellpadding="5" cellspacing="1">
+    <caption><h1>My current Projects</h1></caption>
     <tr>
         <th><h4>ID</h4></th>
         <th><h4>CUSTOMER</h4></th>
@@ -30,6 +29,10 @@
     <c:url var="payButton" value="/payProject">
         <c:param name="id" value="${project.id}"/>
     </c:url>
+        <c:url var="deleteButton" value="/deleteProject">
+            <c:param name="projectId" value="${project.id}"/>
+            <c:param name="button" value="myCurrentProjects"/>
+        </c:url>
     <tr>
         <td>${project.id}</td>
         <td>${project.customer}</td>

@@ -48,7 +48,7 @@ public class MyContext {
     public LocalSessionFactoryBean sessionFactory(){
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan("second.project");
+        sessionFactory.setPackagesToScan("IT.Company");
         Properties sessionProperties = new Properties();
         sessionProperties.setProperty("hibernate.dialect","org.hibernate.dialect.MySQLDialect");
         sessionProperties.setProperty("hibernate.show_sql","true");

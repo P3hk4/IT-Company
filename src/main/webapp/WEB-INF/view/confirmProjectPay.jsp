@@ -17,8 +17,8 @@
     <form:hidden path="id"/>
 <h1>Do you really want pay for ${project.name} project?</h1>
     <br><br>
-    <input type="button" value="Back" onclick="window.location.href='/myProjects'">
-    <input type="submit" value="PAY">
+    <input type="button" value="Back" onclick="window.location.href='/myCurrentProjects'">
+    <input type="submit" value="Pay">
 </form:form>
 </body>
 </html>

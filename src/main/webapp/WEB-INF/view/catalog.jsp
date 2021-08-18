@@ -1,3 +1,4 @@
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: Pavel
@@ -19,9 +20,11 @@
 <input type="button" value="Projects unpaid" onclick="window.location.href='/projectsUnpaid'">
 <input type="button" value="Projects completed" onclick="window.location.href='/projectsCompleted'">
 <br>
+<security:authorize access="hasRole('ADMIN')">
 <input type="button" value="All employees" onclick="window.location.href='/allEmployees'">
 <input type="button" value="All clients" onclick="window.location.href='/allClients'">
+</security:authorize>
 <br><br>
-<input type="button" value="BACK" onclick="window.location.href='/'">
+<input type="button" value="Back" onclick="window.location.href='/'">
 </body>
 </html>

@@ -49,9 +49,16 @@ public class ProjectDAOImplementation implements ProjectDAO{
     }
 
     @Override
-    public List<Project> getMyProjects(String username) {
+    public List<Project> getMyCurrentProjects(String username) {
         Session session = sessionFactory.getCurrentSession();
-        return session.createQuery("from Project where customer = :paramUsername",Project.class).setParameter("paramUsername",username).getResultList();
+        return session.createQuery("from Project where (customer = :paramUsername) and (completed = false)",Project.class).setParameter("paramUsername",username).getResultList();
+    }
+
+    @Override
+    public List<Project> getMyCompletedProjects(String username) {
+        Session session = sessionFactory.getCurrentSession();
+        List<Project> projects = session.createQuery("from Project where (customer = :paramUsername) and (completed = true)",Project.class).setParameter("paramUsername",username).getResultList();
+        return projects;
     }
 
     @Override
@@ -63,7 +70,8 @@ public class ProjectDAOImplementation implements ProjectDAO{
     @Override
     public void deleteProject(int id) {
         Session session = sessionFactory.getCurrentSession();
-        session.delete("Project.class",id);
+        Project project = getProject(id);
+        session.delete(project);
     }
 
     @Override

@@ -85,6 +85,16 @@ public class MyController {
         }
     }
 
+    @RequestMapping("/back")
+    public String back(@RequestParam("auth")String auth){
+        System.out.println(auth);
+        if (auth.equals("ROLE_CLIENT")) {
+            return "redirect:/allClients";
+        } else {
+            return "redirect:/allEmployees";
+        }
+    }
+
     @RequestMapping("/catalog")
     public String allAccounts(){
         return "/catalog";
@@ -139,7 +149,7 @@ public class MyController {
 
     @RequestMapping("/saveAdminUpdate")
     public String saveAdminUpdate(@ModelAttribute("acc")Account account){
-        System.out.println(account);
+        String auth = account.getAuthority();
         if ((account.getPost().equals("Front-end developer") || (account.getPost().equals("Back-end developer")) && !(account.getAuthority().equals("ROLE_DEVELOPER")))){
             account.setAuthority("ROLE_DEVELOPER");
         } else if ((account.getPost().equals("Client") && !(account.getAuthority().equals("ROLE_CLIENT")))){
@@ -150,18 +160,25 @@ public class MyController {
             account.setAuthority("ROLE_MANAGER");
         }
         accountService.saveOrUpdateAcc(account);
-        if (account.getAuthority().equals(("ROLE_CLIENT")) ){
+        if (auth.equals(("ROLE_CLIENT")) ){
             return "redirect:/allClients";
         } else {
             return "redirect:/allEmployees";
         }
     }
 
-    @RequestMapping("/myProjects")
-    public String myProjects(Model model){
+    @RequestMapping("/myCurrentProjects")
+    public String myCurrentProjects(Model model){
         org.springframework.security.core.userdetails.User user = (org.springframework.security.core.userdetails.User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        model.addAttribute("myProjects",projectService.getMyProjects(user.getUsername()));
-        return "/myProjects";
+        model.addAttribute("myProjects",projectService.getMyCurrentProjects(user.getUsername()));
+        return "myCurrentProjects";
+    }
+
+    @RequestMapping("/myCompletedProjects")
+    public String myCompletedProjects(Model model){
+        org.springframework.security.core.userdetails.User user = (org.springframework.security.core.userdetails.User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        model.addAttribute("myProjects",projectService.getMyCompletedProjects(user.getUsername()));
+        return "myCompletedProjects";
     }
 
     @RequestMapping("/addOrder")
@@ -175,7 +192,7 @@ public class MyController {
     @RequestMapping("/saveNewOrder")
     public String saveNewOrder(@ModelAttribute("project")Project project){
         projectService.saveProject(project);
-        return "redirect:/myProjects";
+        return "redirect:/myCurrentProjects";
     }
 
     @RequestMapping("/projectsInProgress")
@@ -199,7 +216,7 @@ public class MyController {
         } else if (project.getPayed().equals(true)) {
         return "/alreadyPaidError";
         }
-        return "redirect:/myProjects";
+        return "redirect:/myCurrentProjects";
     }
 
     @RequestMapping("/saveProjectPay")
@@ -207,7 +224,7 @@ public class MyController {
         project = projectService.getProject(project.getId());
         project.setPayed(true);
         projectService.saveProject(project);
-        return "redirect:/myProjects";
+        return "redirect:/myCurrentProjects";
     }
 
     @RequestMapping("/addDeveloper")
@@ -240,9 +257,15 @@ public class MyController {
     }
 
     @RequestMapping("/deleteProject")
-    public String deleteProject(@RequestParam("projectId")int id){
+    public String deleteProject(@RequestParam("projectId")int id,@RequestParam("button")String button){
         projectService.deleteProject(id);
-        return "redirect:/projectsUnpaid";
+        if (button.equals("projectsUnpaid")) {
+            return "redirect:/projectsUnpaid";
+        } else if (button.equals("myCurrentProjects")){
+            return "redirect:/myCurrentProjects";
+        } else {
+            return "redirect:/projectsCompleted";
+        }
     }
 
     @RequestMapping("/myWorkProjects")
@@ -284,4 +307,32 @@ public class MyController {
         model.addAttribute("projects",projectService.getAllProjectsCompleted());
         return "/projectsCompleted";
     }
+
+    @RequestMapping("/changePassword")
+    public String changePassword(@RequestParam("username")String username,Model model){
+        model.addAttribute("username",username);
+        return "/confirmPassword";
+    }
+
+    @RequestMapping("/confirmPassword")
+    public String confirmPassword(@RequestParam("username")String username, @RequestParam("password")String password, Model model){
+        password = "{noop}"+password;
+        if (password.equals(userService.getUser(username).getPassword())){
+            model.addAttribute("user",userService.getUser(username));
+            return "newPassword";
+        } else {
+            model.addAttribute("username",username);
+            return "/confirmPasswordError";
+        }
+    }
+
+    @RequestMapping("/saveNewPassword")
+    public String saveNewPassword(@ModelAttribute("user")User user, @RequestParam("newPassword") String newPassword){
+        System.out.println(user+newPassword);
+        user.setPassword("{noop}"+newPassword);
+        System.out.println(user);
+        userService.saveOrUpdateUser(user);
+        return "redirect:/myAccPage";
+    }
+
 }

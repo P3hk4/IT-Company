@@ -24,9 +24,9 @@
     <h4>NAME:<form:input path="name"/></h4>
     <h4>SURNAME:<form:input path="surname"/></h4>
     <br><br>
-    <input type="submit" value="SAVE">
+    <input type="submit" value="Save">
     <br><br>
-    <input type="button" value="BACK" onclick="window.location.href='/myAccPage'">
+    <input type="button" value="Back" onclick="window.location.href='/myAccPage'">
 </form:form>
 </body>
 </html>

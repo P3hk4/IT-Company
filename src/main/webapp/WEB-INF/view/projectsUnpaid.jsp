@@ -13,9 +13,8 @@
 </head>
 <body>
 <br><br>
-<h1>Unpaid projects</h1>
-<br><br>
-<table>
+<table border="2" cellpadding="5" cellspacing="1">
+    <caption><h1>Unpaid projects</h1></caption>
     <tr>
         <th><h4>ID</h4></th>
         <th><h4>CUSTOMER</h4></th>
@@ -25,7 +24,8 @@
     </tr>
 <c:forEach var="project" items="${projects}">
     <c:url var="deleteButton" value="/deleteProject">
-        <c:param name="id" value="${project.id}"/>
+        <c:param name="projectId" value="${project.id}"/>
+        <c:param name="button" value="projectsUnpaid"/>
     </c:url>
     <TR>
         <td>${project.id}</td>

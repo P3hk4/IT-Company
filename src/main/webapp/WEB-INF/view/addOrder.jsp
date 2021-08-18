@@ -19,7 +19,7 @@
     <form:hidden path="customer"/>
     <h4>What product do you need?<br><form:input path="name"/></h4>
     <br><br>
-    <input type="button" value="Back" onclick="window.location.href='/myOrder'">
+    <input type="button" value="Back" onclick="window.location.href='/myCurrentProjects'">
     <input type="submit" value="Save order">
 </form:form>
 </body>

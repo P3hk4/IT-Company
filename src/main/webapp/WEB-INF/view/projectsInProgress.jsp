@@ -14,9 +14,8 @@
 </head>
 <body>
 <br><br>
-<h1>Projects in progress</h1>
-<br><br>
-<table>
+<table border="2" cellpadding="5" cellspacing="1">
+    <caption><h1>PROJECT IN PROGRESS</h1></caption>
     <tr>
         <th><h4>ID</h4></th>
         <th><h4>CUSTOMER</h4></th>
