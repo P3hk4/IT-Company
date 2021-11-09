@@ -39,7 +39,7 @@ CREATE TABLE `employees` (
 
 LOCK TABLES `employees` WRITE;
 /*!40000 ALTER TABLE `employees` DISABLE KEYS */;
-INSERT INTO `employees` VALUES ('admin','Pavel','Tarasov','Administrator',0),('backdev','Leonid','Romanov','Back-end developer',85000),('client','DEV','COMPANY',NULL,0),('client2','Mid','Company','',0),('frontdev','Dmitriy','Novikov','Front-end developer',95000),('manager','Sergey','Kolokolcev','Operations manager',90000);
+INSERT INTO `employees` VALUES ('admin','Pavel','Tarasov',NULL,0),('backdev','Leonid','Romanov','Back-end developer',100000),('client','DEV','COMPANY','Client',0),('client2','Mihail','Horoshev','Client',0),('frontdev','Nikolay','Volodin','Front-end developer',90000),('manager','Sergey','Kolokolcev','Manager',140000);
 /*!40000 ALTER TABLE `employees` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-08-18 12:14:18
+-- Dump completed on 2021-11-09 14:44:19

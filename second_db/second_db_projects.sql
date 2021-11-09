@@ -26,7 +26,6 @@ CREATE TABLE `projects` (
   `id` int NOT NULL AUTO_INCREMENT,
   `customer` varchar(30) DEFAULT NULL,
   `name` varchar(30) DEFAULT NULL,
-  `surname` varchar(30) DEFAULT NULL,
   `frontendStatus` tinyint(1) DEFAULT NULL,
   `backendStatus` tinyint(1) DEFAULT NULL,
   `frontendDeveloper` varchar(30) DEFAULT NULL,
@@ -36,7 +35,7 @@ CREATE TABLE `projects` (
   PRIMARY KEY (`id`),
   KEY `customer` (`customer`),
   CONSTRAINT `projects_ibfk_1` FOREIGN KEY (`customer`) REFERENCES `users` (`username`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,7 +44,7 @@ CREATE TABLE `projects` (
 
 LOCK TABLES `projects` WRITE;
 /*!40000 ALTER TABLE `projects` DISABLE KEYS */;
-INSERT INTO `projects` VALUES (1,'client','Car service software',NULL,1,1,'frontdev','backdev',1,1),(2,'client','Shop software',NULL,1,1,'frontdev','backdev',1,1),(6,'client','Web service',NULL,1,1,'frontdev','backdev',1,1),(7,'client','Market',NULL,1,1,'frontdev','backdev',1,1),(8,'client','Server software',NULL,1,1,'frontdev','backdev',1,1),(10,'client2','Server software',NULL,0,0,NULL,NULL,0,1),(11,'client2','Shop software',NULL,0,0,NULL,NULL,0,0),(14,'client2','Car service software',NULL,0,1,'frontdev','backdev',0,1),(15,'client2','Law compant software',NULL,1,0,'frontdev','backdev',0,1);
+INSERT INTO `projects` VALUES (22,'client','Онлайн магазин',1,1,'frontdev','backdev',1,1),(23,'client','Личный блог',0,1,'frontdev','backdev',0,1),(24,'client2','ПО Автомобильного сервиса',0,0,NULL,NULL,0,1);
 /*!40000 ALTER TABLE `projects` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -58,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-08-18 12:14:18
+-- Dump completed on 2021-11-09 14:44:19

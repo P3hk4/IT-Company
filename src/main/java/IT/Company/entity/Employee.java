@@ -17,7 +17,7 @@ public class Employee {
     private String surname;
 
     @Column(name = "post")
-    private String post;
+    private String post = "Client";
 
     @Column(name = "salary")
     private int salary;

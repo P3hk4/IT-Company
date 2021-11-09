@@ -36,7 +36,7 @@ CREATE TABLE `authorities` (
 
 LOCK TABLES `authorities` WRITE;
 /*!40000 ALTER TABLE `authorities` DISABLE KEYS */;
-INSERT INTO `authorities` VALUES ('client','ROLE_CLIENT'),('admin','ROLE_ADMIN'),('manager','ROLE_MANAGER'),('backdev','ROLE_DEVELOPER'),('frontdev','ROLE_DEVELOPER'),('client2','ROLE_CLIENT');
+INSERT INTO `authorities` VALUES ('client','ROLE_CLIENT'),('manager','ROLE_MANAGER'),('backdev','ROLE_DEVELOPER'),('admin','ROLE_ADMIN'),('frontdev','ROLE_DEVELOPER'),('client2','ROLE_CLIENT');
 /*!40000 ALTER TABLE `authorities` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-08-18 12:14:18
+-- Dump completed on 2021-11-09 14:44:19
