@@ -7,23 +7,23 @@ import java.util.List;
 
 public interface ProjectDAO {
 
-    public List<Project> getAllProjectsInProgress();
+    List<Project> getAllProjectsInProgress();
 
-    public List<Project> getAllProjectsUnpaid();
+    List<Project> getAllProjectsUnpaid();
 
-    public List<Project> getAllProjectsCompleted();
+    List<Project> getAllProjectsCompleted();
 
-    public List<Project> getAllProjectWithoutDevelopers();
+    List<Project> getAllProjectWithoutDevelopers();
 
-    public Project getProject(int id);
+    Project getProject(int id);
 
-    public List<Project> getMyCurrentProjects(String username);
+    List<Project> getMyProjects(String username);
 
-    public List<Project> getMyCompletedProjects(String username);
+    void saveProject(Project project);
 
-    public void saveProject(Project project);
+    void deleteProject(int id);
 
-    public void deleteProject(int id);
+    void payProject(int id);
 
-    public List<Project> getMyWorkProjects(String username);
+    List<Project> getMyWorkProjects(String username);
 }

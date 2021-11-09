@@ -46,14 +46,8 @@ public class ProjectServiceImplementation implements ProjectService{
 
     @Override
     @Transactional
-    public List<Project> getMyCompletedProjects(String username) {
-        return projectDAO.getMyCompletedProjects(username);
-    }
-
-    @Override
-    @Transactional
-    public List<Project> getMyCurrentProjects(String username) {
-        return projectDAO.getMyCurrentProjects(username);
+    public List<Project> getMyProjects(String username) {
+        return projectDAO.getMyProjects(username);
     }
 
     @Override
@@ -66,6 +60,12 @@ public class ProjectServiceImplementation implements ProjectService{
     @Transactional
     public void deleteProject(int id) {
         projectDAO.deleteProject(id);
+    }
+
+    @Override
+    @Transactional
+    public void payProject(int id) {
+        projectDAO.payProject(id);
     }
 
     @Override

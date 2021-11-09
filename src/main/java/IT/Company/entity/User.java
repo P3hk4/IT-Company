@@ -14,9 +14,9 @@ public class User {
     private String password;
 
     @Column(name = "enabled")
-    private byte enabled = 1;
+    private int enabled = 1;
 
-    public User(String username, String password, byte enabled) {
+    public User(String username, String password, int enabled) {
         this.username = username;
         this.password = password;
         this.enabled = enabled;
@@ -41,11 +41,11 @@ public class User {
         this.password = password;
     }
 
-    public byte getEnabled() {
+    public int getEnabled() {
         return enabled;
     }
 
-    public void setEnabled(byte enabled) {
+    public void setEnabled(int enabled) {
         this.enabled = enabled;
     }
 

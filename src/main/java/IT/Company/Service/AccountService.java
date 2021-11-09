@@ -6,15 +6,17 @@ import java.util.List;
 
 public interface AccountService {
 
-    public List<Account> getAllEmployees();
+    List<Account> getAllEmployees();
 
-    public List<Account> getAllClients();
+    List<Account> getAllClients();
 
-    public void saveOrUpdateAcc(Account account);
+    List<Account> getAllAccounts();
 
-    public Account getAccount(String username);
+    void saveOrUpdateAcc(Account account);
 
-    public List<Account> getAllFrontDevelopers();
+    Account getAccount(String username);
 
-    public List<Account> getAllBackDevelopers();
+    List<Account> getAllFrontDevelopers();
+
+    List<Account> getAllBackDevelopers();
 }

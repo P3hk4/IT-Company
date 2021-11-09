@@ -28,6 +28,12 @@ public class AccountServiceImplementation implements AccountService {
 
     @Override
     @Transactional
+    public List<Account> getAllAccounts() {
+        return accountDAO.getAllAccounts();
+    }
+
+    @Override
+    @Transactional
     public void saveOrUpdateAcc(Account account) {
         accountDAO.saveOrUpdateAcc(account);
     }

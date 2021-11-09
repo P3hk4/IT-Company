@@ -6,23 +6,23 @@ import java.util.List;
 
 public interface ProjectService {
 
-    public List<Project> getAllProjectsInProgress();
+    List<Project> getAllProjectsInProgress();
 
-    public List<Project> getAllProjectsUnpaid();
+    List<Project> getAllProjectsUnpaid();
 
-    public List<Project> getAllProjectsCompleted();
+    List<Project> getAllProjectsCompleted();
 
-    public List<Project> getAllProjectsWithoutDevelopers();
+    List<Project> getAllProjectsWithoutDevelopers();
 
-    public Project getProject(int id);
+    Project getProject(int id);
 
-    public List<Project> getMyCurrentProjects(String username);
+    List<Project> getMyProjects(String username);
 
-    public List<Project> getMyCompletedProjects(String username);
+    void saveProject(Project project);
 
-    public void saveProject(Project project);
+    void deleteProject(int id);
 
-    public void deleteProject(int id);
+    void payProject(int id);
 
-    public List<Project> getMyWorkProject(String username);
+    List<Project> getMyWorkProject(String username);
 }

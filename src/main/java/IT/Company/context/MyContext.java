@@ -9,6 +9,8 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import javax.sql.DataSource;
@@ -19,8 +21,12 @@ import java.util.Properties;
 @EnableTransactionManagement
 @EnableWebMvc
 @ComponentScan(basePackages = "IT.Company")
-public class MyContext {
+public class MyContext implements WebMvcConfigurer {
 
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/Resources/**").addResourceLocations("/Resources/");
+    }
 
     @Bean(name = "ViewResolver")
     public InternalResourceViewResolver internalResourceViewResolver(){
@@ -37,7 +43,7 @@ public class MyContext {
             dataSource.setPassword("bestuser");
             dataSource.setUser("bestuser");
             dataSource.setDriverClass("com.mysql.cj.jdbc.Driver");
-            dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/second_db?useSSL=false&serverTimezone=UTC");
+            dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/second_db?allowPublicKeyRetrieval=TRUE&useSSL=false&serverTimezone=UTC");
         } catch (PropertyVetoException e) {
             e.printStackTrace();
         }

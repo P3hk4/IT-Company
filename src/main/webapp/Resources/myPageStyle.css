@@ -1,0 +1,162 @@
+html{
+    background-color: #EAEAEA;
+}
+
+body {
+    background-color: #EAEAEA;
+}
+
+#brand {
+    font-weight: bolder;
+}
+
+#navbarPanel {
+    background-color: #393E46;
+    color: white;
+    border-bottom: 2px outset black;
+}
+
+.navbar-nav > li{
+    padding-left:5px;
+    padding-right:5px;
+}
+
+#info-container, #infoEdit-container, #changePassword-container, #newPasswordContainer {
+    color: white;
+    position: fixed;
+    top: 23%;
+    left: 37.5%;
+    padding-top: 2%;
+    width: 25%;
+    height: 42%;
+    text-align: center;
+    background-color: #393E46;
+    border: 1px outset black;
+    border-radius: 10px 10px;
+}
+
+#changePasswordButton{
+    font-weight: 500;
+    font-size: 1em;
+    background-color: #EAEAEA;
+    border: 1px outset #EAEAEA;
+    border-radius: 10px 10px;
+    height: 4%;
+    width: 8%;
+    position:fixed;
+    top: 52%;
+    left: 41%;
+    padding-bottom: 4px;
+}
+
+#changePasswordButton:hover, #backNewPasswordButton:hover{
+    font-weight: 500;
+    font-size: 1em;
+    background-color: #EAEAEA;
+    border: 1px inset #EAEAEA;
+    border-radius: 10px 10px;
+    height: 4%;
+    width: 8%;
+    position:fixed;
+    top: 52%;
+    left: 41%;
+    padding-bottom: 4px;
+}
+
+#editButton, #editSaveButton{
+    font-weight: 500;
+    font-size: 1em;
+    background-color: #EAEAEA;
+    border: 1px outset #EAEAEA;
+    border-radius: 10px 10px;
+    height: 4%;
+    width: 8%;
+    position:fixed;
+    top: 52%;
+    left: 52%;
+    padding-bottom: 4px;
+}
+
+#editButton:hover, #editSaveButton:hover{
+    font-weight: 500;
+    font-size: 1em;
+    background-color: #EAEAEA;
+    border: 1px inset #EAEAEA;
+    border-radius: 10px 10px;
+    height: 4%;
+    width: 8%;
+    position:fixed;
+    top: 52%;
+    left: 52%;
+    padding-bottom: 4px;
+}
+
+#titleContainer {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    line-height: 1.7;
+}
+
+#valueContainer{
+    position: absolute;
+    top: 10%;
+    right: 15%;
+}
+
+
+#backButton,  #backEditButton, #backPasswordButton, #backNewPasswordButton {
+    font-weight: 500;
+    font-size: 1em;
+    background-color: #EAEAEA;
+    border: 1px outset #EAEAEA;
+    border-radius: 10px 10px;
+    height: 4%;
+    width: 8%;
+    position:fixed;
+    top: 58%;
+    left: 41%;
+    padding-bottom: 4px;
+}
+
+#backButton:hover,  #backEditButton:hover, #backPasswordButton:hover, #backNewPasswordButton:hover {
+    font-weight: 500;
+    font-size: 1em;
+    background-color: #EAEAEA;
+    border: 1px inset #EAEAEA;
+    border-radius: 10px 10px;
+    height: 4%;
+    width: 8%;
+    position:fixed;
+    top: 58%;
+    left: 41%;
+    padding-bottom: 4px;
+}
+
+#deleteAccountButton, #editSaveButton, #changePasswordSaveButton, #saveNewPasswordButton {
+    font-weight: 500;
+    font-size: 1em;
+    background-color: #EAEAEA;
+    border: 1px outset #EAEAEA;
+    border-radius: 10px 10px;
+    height: 4%;
+    width: 8%;
+    position:fixed;
+    top: 58%;
+    left: 52%;
+    padding-bottom: 4px;
+}
+
+#deleteAccountButton:hover, #editSaveButton:hover, #changePasswordSaveButton:hover, #saveNewPasswordButton:hover {
+    font-weight: 500;
+    font-size: 1em;
+    background-color: #EAEAEA;
+    border: 1px inset #EAEAEA;
+    border-radius: 10px 10px;
+    height: 4%;
+    width: 8%;
+    position:fixed;
+    top: 58%;
+    left: 52%;
+    padding-bottom: 4px;
+}

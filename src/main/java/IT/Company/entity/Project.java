@@ -36,7 +36,8 @@ public class Project {
     @Column(name = "payed")
     private Boolean payed = false;
 
-    public Project(String customer) {
+    public Project(String customer, String name) {
+        this.name = name;
         this.customer = customer;
     }
 

@@ -6,15 +6,17 @@ import java.util.List;
 
 public interface AccountDAO {
 
-    public List<Account> getAllEmployees();
+    List<Account> getAllEmployees();
 
-    public List<Account> getAllClients();
+    List<Account> getAllClients();
 
-    public void saveOrUpdateAcc(Account account);
+    void saveOrUpdateAcc(Account account);
 
-    public Account getAccount(String username);
+    Account getAccount(String username);
 
-    public List<Account> getAllFrontDevelopers();
+    List<Account> getAllFrontDevelopers();
 
-    public List<Account> getAllBackDevelopers();
+    List<Account> getAllBackDevelopers();
+
+    List<Account> getAllAccounts();
 }
