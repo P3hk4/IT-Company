@@ -1,0 +1,257 @@
+html{
+    background-color: #EAEAEA;
+}
+
+body {
+    background-color: #EAEAEA;
+}
+
+#brand {
+    font-weight: bolder;
+}
+
+.navbar-nav > li{
+    padding-left:5px;
+    padding-right:5px;
+}
+
+#navbarPanel {
+    background-color: #393E46;
+    color: white;
+    border-bottom: 2px outset black;
+}
+
+#loginPanel, #registrationPanel{
+    position: fixed;
+    height: 365px;
+    width:  500px;
+    top:35%;
+    left: 36%;
+    background-color: #393E46;
+    border: 1px outset black;
+    border-radius: 20px 20px;
+}
+
+#usernameHolder{
+    position: fixed;
+    top: 40%;
+    left: 41%;
+    border: 1px outset #EAEAEA;
+    border-radius: 20px 20px;
+    height: 50px;
+    width: 300px;
+    font-weight: 500;
+    font-size: 1em;
+    padding-top: 8px;
+    padding-left: 15px;
+}
+
+#passwordHolder {
+    position: fixed;
+    top: 48%;
+    left: 41%;
+    border: 1px outset #EAEAEA;
+    border-radius: 20px 20px;
+    height: 50px;
+    width: 300px;
+    font-weight: 500;
+    font-size: 1em;
+    padding-top: 8px;
+    padding-left: 15px;
+}
+
+
+
+#loginButton{
+    font-weight: 500;
+    font-size: 1.5em;
+    background-color: #EAEAEA;
+    border: 1px outset #EAEAEA;
+    border-radius: 20px 20px;
+    height: 50px;
+    width: 300px;
+    position:fixed;
+    top: 46%;
+    left: 41%;
+}
+
+#loginButton:hover{
+    font-weight: 500;
+    font-size: 1.5em;
+    background-color: #EAEAEA;
+    border: 1px inset #EAEAEA;
+    border-radius: 20px 20px;
+    height: 50px;
+    width: 300px;
+    position:fixed;
+    top: 46%;
+    left: 41%;
+}
+
+#registrationButton{
+    font-weight: 500;
+    font-size: 1.5em;
+    background-color: #EAEAEA;
+    border: 1px outset #EAEAEA;
+    border-radius: 20px 20px;
+    height: 50px;
+    width: 300px;
+    position:fixed;
+    top: 57%;
+    left: 41%;
+}
+
+
+
+#registrationButton:hover{
+    font-weight: 500;
+    font-size: 1.5em;
+    background-color: #EAEAEA;
+    border: 1px inset #EAEAEA;
+    border-radius: 20px 20px;
+    height: 50px;
+    width: 300px;
+    position:fixed;
+    top: 57%;
+    left: 41%;
+}
+
+#passwordForm {
+    border-radius: 5px 5px;
+}
+#usernameForm {
+    border-radius: 5px 5px;
+}
+#saveButton {
+    font-weight: 500;
+    font-size: 1.5em;
+    background-color: #EAEAEA;
+    border: 1px outset #EAEAEA;
+    border-radius: 20px 20px;
+    height: 50px;
+    width: 150px;
+    position:fixed;
+    top: 60%;
+    left: 50%;
+    padding-bottom: 6px;
+}
+
+#saveButton:hover {
+    font-weight: 500;
+    font-size: 1.5em;
+    background-color: #EAEAEA;
+    border: 1px inset #EAEAEA;
+    border-radius: 20px 20px;
+    height: 50px;
+    width: 150px;
+    position:fixed;
+    top: 60%;
+    left: 50%;
+    padding-bottom: 6px;
+}
+
+#backButton {
+    font-weight: 500;
+    font-size: 1.5em;
+    background-color: #EAEAEA;
+    border: 1px outset #EAEAEA;
+    border-radius: 20px 20px;
+    height: 50px;
+    width: 150px;
+    position:fixed;
+    top: 60%;
+    left: 40%;
+    padding-bottom: 6px;
+}
+
+#backButton:hover {
+    font-weight: 500;
+    font-size: 1.5em;
+    background-color: #EAEAEA;
+    border: 1px inset #EAEAEA;
+    border-radius: 20px 20px;
+    height: 50px;
+    width: 150px;
+    position:fixed;
+    top: 60%;
+    left: 40%;
+    padding-bottom: 6px;
+}
+#mainClientContainer {
+    text-align: center;
+    background-color: #EAEAEA;;
+    width: 100%;
+}
+
+body {
+    background-color: #EAEAEA;
+}
+
+#createOrderButton {
+    font-weight: 400;
+    font-size: 1.5em;
+    background-color: #EAEAEA;
+    border: 1px solid #393E46;
+    border-radius: 20px 20px;
+    width: 12%;
+    height: 6%;
+    padding-bottom: 6px;
+    position: fixed;
+    right: 10%;
+    top: 50%;
+}
+
+#myProjectsButton {
+    font-weight: 400;
+    font-size: 1.5em;
+    color: #EAEAEA;
+    width: 12%;
+    height: 6%;
+    background-color: #393E46;
+    border: 1px solid #393E46;
+    border-radius: 20px 20px;
+    padding-bottom: 6px;
+    position: fixed;
+    right: 24%;
+    top: 50%;
+}
+
+#mainClientInfoMessage {
+    font-size: 3.5em;
+}
+#secondClientInfoMessage {
+    font-size: 3.5em;
+    width: 30%;
+    position: fixed;
+    top: 35%;
+    left: 5%;
+}
+
+#setDeveloperButton{
+    font-weight: 400;
+    font-size: 2em;
+    background-color: #EAEAEA;
+    border: 1px solid #393E46;
+    border-radius: 20px 20px;
+    width: 30%;
+    height: 25%;
+    padding-bottom: 6px;
+    position: fixed;
+    right: 15%;
+    top: 40%;
+}
+
+#submitProjectButton{
+    font-weight: 400;
+    font-size: 2em;
+    color: #EAEAEA;
+    width: 30%;
+    height: 25%;
+    background-color: #393E46;
+    border: 1px solid #C5C5C5;
+    border-radius: 20px 20px;
+    padding-bottom: 6px;
+    position: fixed;
+    right: 55%;
+    top: 40%;
+}
